@@ -1,0 +1,17 @@
+<md-card>
+    <md-card-content>
+    <div style="border:1px solid gray;padding:10px;">
+    <div>
+        <label>Street: </label>
+        <md-input [disabled] = "mode == 'View'" [(ngModel)]="address.street" placeholder="enter street"></md-input>
+    </div>
+    <div>
+        <label>City: </label>
+        <md-input [disabled] = "mode == 'View'" [(ngModel)]="address.city" placeholder="enter city"></md-input>
+    </div>
+    <div>
+        <button type="button" md-raised-button color="accent" *ngIf  = "mode != 'View'" (click) = "remove()">Delete</button>
+    </div>
+    </div>  
+    </md-card-content>
+</md-card>

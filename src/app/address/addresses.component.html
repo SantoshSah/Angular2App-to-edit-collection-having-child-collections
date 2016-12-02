@@ -1,0 +1,13 @@
+<md-card>
+    <md-card-content>
+    <div *ngFor = "let address of addresses; let addressIndex = index;">
+        <address [address]="address" [addressIndex] = "addressIndex" [mode] = "mode" (onRemoved) = "onRemoved($event)"></address>
+    </div>
+    <div style="padding:10px;">
+        <button type="button" 
+        md-raised-button color="accent" 
+        *ngIf  = "mode != 'View'" 
+        (click) = "addContact()">Add address</button>
+    </div>
+    </md-card-content>
+</md-card>

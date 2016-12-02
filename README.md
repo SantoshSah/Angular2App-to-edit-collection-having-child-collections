@@ -1,7 +1,7 @@
 ### Quick start
 
 # Angular2App-to-edit-collection-having-child-collections
-Angular2 frontend app to edit collection that can contain child collections with Asp.Net Core web as api backend
+Angular2 frontend app to edit collection that can contain child collections with Asp.Net Core web as api backend using starter template https://github.com/angularclass/angular2-webpack-starter.git
 
 > Steps to run this project in your local, run following command in root directory of your project.
 

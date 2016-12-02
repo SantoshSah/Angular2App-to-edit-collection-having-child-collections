@@ -1,0 +1,27 @@
+<h1 x-large class="sample-content">List of people</h1>
+<p *ngIf="message">{{message.text}}<p>
+<button type="button" md-raised-button color="accent" (click) = "addPerson()">Add New Person</button>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp full-width" style='width:100%'>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let person of people; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{person.firstName}}</td>
+        <td>{{person.lastName}}</td>
+        <td>
+            <div class="btn-group">
+                <button type="button" md-raised-button color="accent" (click) = "viewPerson(person.id)">View</button>
+                <button type="button" md-raised-button color="primary" (click) = "editPerson(person.id)">Edit</button>
+                <button type="button" md-raised-button color="warn" (click) = "deletePerson(person)">Delete</button>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>

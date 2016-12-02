@@ -1,0 +1,29 @@
+<md-card class="wide-card">
+    <md-card-title></md-card-title>
+    <h1 x-large class="sample-content">Person detail</h1>
+    <md-card-content>
+    <p>
+        <button md-raised-button color="accent" (click)="goBack()">Back</button>
+    </p>
+    <p *ngIf="message">{{message.text}}<p>
+    <div *ngIf = "person">
+        <div>
+            <label>First name: </label>
+            <md-input [disabled] = "mode == 'View'" [(ngModel)]="person.firstName" placeholder="enter first name" autofocus></md-input>
+        </div>
+        <div>
+            <label>Last name: </label>
+            <md-input [disabled] = "mode == 'View'" [(ngModel)]="person.lastName" placeholder="enter last name"></md-input>
+        </div>
+        <div>
+        <label>Addresses: </label>
+        <addresses [addresses]="person.addresses" [mode] = "mode"></addresses>
+        </div>
+        <div style="margin:10px;">
+        <button type="button" md-raised-button x-small color="accent"
+            *ngIf  = "mode != 'View'" (click) = "save()">Save</button>
+        </div>
+        
+    </div>
+    </md-card-content>
+</md-card> 
