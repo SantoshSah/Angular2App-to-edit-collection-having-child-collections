@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
-import {ToastyService, ToastyConfig, ToastOptions, ToastData} from 'ng2-toasty';
 
 import {Address, Message, Person} from '../shared/models';
 import {PersonService} from '../shared/services/data-services';

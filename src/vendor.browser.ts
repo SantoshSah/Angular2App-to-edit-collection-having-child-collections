@@ -21,10 +21,6 @@ import '@angularclass/hmr';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
-import 'ng2-toasty';
-import 'ng2-toasty/style.css';
-import 'ng2-toasty/style-material.css';
-
 if ('production' === ENV) {
   // Production
 
